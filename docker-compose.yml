@@ -1,0 +1,11 @@
+services:
+  api:
+    build: .
+    container_name: springboot-api
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mariadb://100.26.219.84:3306/hogwarts_lmga
+      SPRING_DATASOURCE_USERNAME: examen_lmga
+      SPRING_DATASOURCE_PASSWORD: examen
+    restart: always
